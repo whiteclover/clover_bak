@@ -4,7 +4,7 @@
 class Singleton
 {
     public:
-        static Singleton& getInstance()
+        static Singleton& GetInstance()
         {
             static Singleton    instance; // Guaranteed to be destroyed.
                                   // Instantiated on first use.

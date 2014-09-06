@@ -3,10 +3,10 @@
 
 enum ioloop_event_type_t
 {
-        IOLOOP_NONE = 0x0000,
-        IOLOOP_IN  = 0x0001,
-        IOLOOP_OUT = 0x0002,
-        IOLOOP_ERR = 0x0004
+    IOLOOP_NONE = 0x0000,
+    IOLOOP_IN  = 0x0001,
+    IOLOOP_OUT = 0x0002,
+    IOLOOP_ERR = 0x0004
 };
 
 
