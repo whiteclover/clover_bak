@@ -1,17 +1,16 @@
 #ifndef __IOLOOP_H__
 #define __IOLOOP_H__
 
-typdef enum 
+enum ioloop_event_type_t
 {
         IOLOOP_NONE = 0x0000,
         IOLOOP_IN  = 0x0001,
         IOLOOP_OUT = 0x0002,
         IOLOOP_ERR = 0x0004
-} ioloop_event_type_t;
+};
 
 
-
-typedef enum 
+enum ioloop_type_t
 {
     ioloop_epoll,
     ioloop_kqueue,
@@ -19,7 +18,7 @@ typedef enum
     ioloop_poll,
     ioloop_select,
     ioloop_UNSET
-} ioloop_type_t;
+};
 
 class IOLoop
 {

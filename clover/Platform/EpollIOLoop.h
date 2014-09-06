@@ -10,16 +10,13 @@ class EPollIOLoop: public IOLoop {
         EPollIOLoop();
         virtual ~EPollIOLoop();
 
-        virtual int GgetFdLimits() const;
+        virtual int GetFdLimits() const;
         virtual int GetFd() const;
         virtual int Register(int fd, int events);
         virtual int Unregister(int fd, int events);
         virtual int Modify(int fd, int events);
         virtual int Poll(int timeout_msecs);
-
-        virtual bool IsFull() const = 0;
-        virtual bool IsEmpty() const = 0;
-
+        
     private:
         int                    _ep_fd;
         struct epoll_event    *_ep_events;
