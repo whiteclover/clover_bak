@@ -31,7 +31,7 @@ class IOLoop
         ioloop_type_t type;    /* IOLoop Type In (pool, epoll, kqueue...) */
 
 
-        virtual int GgetFdLimits() const = 0;
+        virtual int GetFdLimits() const = 0;
         virtual int GetFd() const = 0;
         virtual Register(int fd, int events)=0;
         virtual Unregister(int fd, int events)=0;
