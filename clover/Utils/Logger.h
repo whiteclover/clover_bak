@@ -2,6 +2,8 @@
 #define __LOGGER_H__
 
 #include <cstdio.h>
+#include <cstring.h>
+#include <cstdlib.h>
 #include "SingletonT.h"
 
 enum LogLevel
@@ -24,20 +26,20 @@ static char *LEVELS[4] =
 class Logger {
 
     public:
-        Logger(const char * filenpath);
+        Logger(const char * filepath=NULL);
         ~Logger();
-        void SetLevel(int level);
-        int SetIdent(const char * ident) const;
         void Log(LogLevel level, int lineno, const char * funname, const char * fmt, ...);
+
+        void SetLevel(LogLevel level) {_level=level};
+        int SetIdent(const char * ident) const { memcpy(_ident, ident, strlen(ident));};
 
 
     private:
 
-        bool _is_write_log;
-        LOGLEVEL level;
-        char log_dir[1024];
-        char ident[128];
-        FILE * file;
+        LogLevel _level;
+        char _log_dir[1024];
+        char _ident[128];
+        FILE * _file;
 };
 
 
