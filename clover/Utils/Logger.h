@@ -46,9 +46,9 @@ class Logger {
 #define sLogger SingletonT< Logger >::Instance()
 
 #define CLOVER_LOG(level, ...) sLogger.Log(level, __LINE__, __FUNCTION__, __VA_ARGS__)
-#define CLOVER_DLOG(...) Logger.Log(DEBUG, __LINE__, __FUNCTION__, __VA_ARGS__)
-#define CLOVER_ILOG(...) Logger.Log(INFO, __LINE__, __FUNCTION__, __VA_ARGS__)
-#define CLOVER_WLOG(...) Logger.Log(WARN, __LINE__, __FUNCTION__, __VA_ARGS__)
-#define CLOVER_ELOG(...) Logger.Log(ERROR, __LINE__, __FUNCTION__, __VA_ARGS__)
+#define CLOVER_DLOG(...) sLogger.Log(DEBUG, __LINE__, __FUNCTION__, __VA_ARGS__)
+#define CLOVER_ILOG(...) sLogger.Log(INFO, __LINE__, __FUNCTION__, __VA_ARGS__)
+#define CLOVER_WLOG(...) sLogger.Log(WARN, __LINE__, __FUNCTION__, __VA_ARGS__)
+#define CLOVER_ELOG(...) sLogger.Log(ERROR, __LINE__, __FUNCTION__, __VA_ARGS__)
 
 #endif // __LOGGER_H__

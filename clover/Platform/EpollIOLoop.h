@@ -1,7 +1,7 @@
 #ifndef __EPOLLIOLOOP__
 #define __EPOLLIOLOOP__
 
-#include "../IOLoop.h"
+#include "IOLoop.h"
 #include <sys/epoll.h>
 
 class EPollIOLoop: public IOLoop {
