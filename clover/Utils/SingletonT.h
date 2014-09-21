@@ -1,4 +1,4 @@
-#ifndef __SINGLETONT__
+#ifndef __SINGLETONT_H__
 #define __SINGLETONT_H__
 #include <stddef.h>  // defines NULL
 

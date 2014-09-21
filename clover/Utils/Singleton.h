@@ -1,10 +1,10 @@
-#ifndef __SINGLETON__
+#ifndef __SINGLETON_H__
 #define __SINGLETON_H__
 
 class Singleton
 {
     public:
-        static Singleton& GetInstance()
+        static Singleton& Instance()
         {
             static Singleton    instance; // Guaranteed to be destroyed.
                                   // Instantiated on first use.

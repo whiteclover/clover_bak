@@ -1,5 +1,5 @@
-#ifndef __EPOLLIOLOOP__
-#define __EPOLLIOLOOP__
+#ifndef __EPOLLIOLOOP_H__
+#define __EPOLLIOLOOP_H__
 
 #include "IOLoop.h"
 #include <sys/epoll.h>
