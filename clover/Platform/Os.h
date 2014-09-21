@@ -14,8 +14,8 @@ class Os
         virtual ~Os() {}
 
     public:
-        int32 SyncAdd(volatile int32 *data, int32 value);
-        int32 SyncSub(volatile int32 *data, int32 value);
+       inline int32 SyncAdd(int32 *data, int32 value);
+       inline int32 SyncSub(int32 *data, int32 value);
 };
 
 
